@@ -2,12 +2,16 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Upload, Search, Scale } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { LegalWebGLBackground } from "./LegalWebGLBackground";
 
 export const Hero = () => {
   const navigate = useNavigate();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* WebGL animated background */}
+      <LegalWebGLBackground />
+      
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-indigo to-secondary opacity-10" />
       
