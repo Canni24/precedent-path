@@ -29,7 +29,7 @@ export const DemoSearchSection = () => {
   };
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden bg-background">
+    <section className="py-24 px-6 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-accent/20 via-transparent to-secondary/20" />
       
