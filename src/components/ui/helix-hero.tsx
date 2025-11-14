@@ -1,6 +1,4 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import { KernelSize } from "postprocessing";
 import type React from "react";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
@@ -104,9 +102,15 @@ const Scene: React.FC = () => {
 				near: 0.1,
 				far: 1000,
 			}}
-			gl={{ antialias: true }}
-			style={{ background: "#ffffff", }}
+			gl={{ 
+				antialias: true,
+				alpha: true,
+				powerPreference: "high-performance"
+			}}
+			style={{ background: "transparent" }}
 		>
+			<color attach="background" args={["#ffffff"]} />
+			
 			<hemisphereLight
 				color={"#cfe8ff"}
 				groundColor={"#ffffff"}
@@ -123,22 +127,6 @@ const Scene: React.FC = () => {
 			/>
 
 			<HelixRings />
-
-			<EffectComposer multisampling={8}>
-				<Bloom
-					kernelSize={3}
-					luminanceThreshold={0}
-					luminanceSmoothing={0.4}
-					intensity={0.6}
-				/>
-				<Bloom
-					kernelSize={KernelSize.HUGE}
-					luminanceThreshold={0}
-					luminanceSmoothing={0}
-					intensity={0.5}
-				/>
-			</EffectComposer>
-            {/* <Perf position="top-left" /> */}
 		</Canvas>
 	);
 };
