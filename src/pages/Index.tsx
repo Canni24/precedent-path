@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -22,6 +23,7 @@ const Index = () => {
       />
       
       <div className="relative z-[5]">
+        <Navbar />
         <Hero />
         <FeaturesSection />
         <HowItWorksSection />
