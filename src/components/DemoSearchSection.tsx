@@ -29,9 +29,9 @@ export const DemoSearchSection = () => {
   };
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-24 px-6 relative overflow-hidden bg-background">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-teal/5" />
+      <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-accent/20 via-transparent to-secondary/20" />
       
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section header */}

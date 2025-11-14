@@ -7,9 +7,9 @@ export const CTASection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-24 px-6 relative overflow-hidden bg-background">
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-indigo to-secondary opacity-10" />
+      <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-primary/20 via-accent/10 to-secondary/20" />
       <motion.div
         className="absolute top-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
         animate={{
