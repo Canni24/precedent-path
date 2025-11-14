@@ -158,12 +158,21 @@ function render() {
     // @ts-ignore
     ctx.globalCompositeOperation = "lighter";
     
+    // Scroll-based dynamic effects
+    const baseOpacity = 0.08;
+    const scrollOpacity = baseOpacity + (scrollProgress * 0.04); // Increases opacity as you scroll
+    const scrollWidth = 8 + (scrollProgress * 4); // Increases width as you scroll
+    
     // JuriSynch color palette - alternating between saffron (38°) and brown (30°)
-    const hue = Math.round(f.update()) % 2 === 0 ? 38 : 30;
+    // Add subtle hue shift based on scroll
+    const baseHue = Math.round(f.update()) % 2 === 0 ? 38 : 30;
+    const hue = baseHue + (scrollProgress * 10); // Subtle hue shift
+    
     // @ts-ignore
-    ctx.strokeStyle = `hsla(${hue}, 92%, 50%, 0.08)`;
+    ctx.strokeStyle = `hsla(${hue}, 92%, 50%, ${scrollOpacity})`;
     // @ts-ignore
-    ctx.lineWidth = 8;
+    ctx.lineWidth = scrollWidth;
+    
     for (var e, t = 0; t < E.trails; t++) {
       // @ts-ignore
       (e = lines[t]).update();
@@ -190,6 +199,7 @@ var ctx,
   pos = { x: 0, y: 0 },
   // @ts-ignore
   lines = [],
+  scrollProgress = 0,
   E = {
     debug: true,
     friction: 0.5,
@@ -204,6 +214,13 @@ function Node() {
   this.y = 0;
   this.vy = 0;
   this.vx = 0;
+}
+
+function updateScrollProgress() {
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight - windowHeight;
+  const scrollTop = window.scrollY;
+  scrollProgress = Math.min(scrollTop / documentHeight, 1);
 }
 
 export const renderCanvas = function () {
@@ -221,6 +238,11 @@ export const renderCanvas = function () {
     frequency: 0.0015,
     offset: 285,
   });
+  
+  // Add scroll event listener for dynamic effects
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  updateScrollProgress(); // Initial calculation
+  
   document.addEventListener("mousemove", onMousemove);
   document.addEventListener("touchstart", onMousemove);
   document.body.addEventListener("orientationchange", resizeCanvas);
