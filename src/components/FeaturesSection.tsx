@@ -43,7 +43,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-24 px-6 relative bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <motion.div
