@@ -16,7 +16,7 @@ export const Hero = () => {
   return (
     <section className="relative h-screen w-screen overflow-hidden bg-background">
       {/* Grid Layout: Left Content, Right Helix */}
-      <div className="relative h-full grid grid-cols-1 lg:grid-cols-2 z-10">
+      <div className="relative h-full grid grid-cols-1 lg:grid-cols-2">
         
         {/* Left Side - Content */}
         <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-20">
@@ -135,14 +135,14 @@ export const Hero = () => {
         </div>
 
         {/* Right Side - Helix WebGL Background */}
-        <div className="hidden lg:block relative h-full">
+        <div className="hidden lg:block relative h-full z-[2]">
           <div className="absolute inset-0">
             <HelixHero title="" description="" />
           </div>
         </div>
 
         {/* Mobile: Helix as Background */}
-        <div className="lg:hidden absolute inset-0 opacity-20 pointer-events-none">
+        <div className="lg:hidden absolute inset-0 opacity-20 pointer-events-none z-[2]">
           <HelixHero title="" description="" />
         </div>
       </div>

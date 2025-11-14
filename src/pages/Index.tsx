@@ -17,11 +17,11 @@ const Index = () => {
     <div className="min-h-screen relative">
       {/* Canvas Background for entire landing page */}
       <canvas
-        className="pointer-events-none fixed inset-0 z-0"
+        className="pointer-events-none fixed inset-0 z-[1]"
         id="canvas"
       />
       
-      <div className="relative z-10">
+      <div className="relative z-[5]">
         <Hero />
         <FeaturesSection />
         <HowItWorksSection />
