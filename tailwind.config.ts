@@ -72,10 +72,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["EB Garamond", "Crimson Text", "Noto Sans Devanagari", "serif"],
-        serif: ["Cormorant Garamond", "Noto Sans Devanagari", "serif"],
-        body: ["EB Garamond", "Crimson Text", "Noto Sans Devanagari", "serif"],
-        heading: ["Cormorant Garamond", "Noto Sans Devanagari", "serif"],
+        sans: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Noto Sans Devanagari", "sans-serif"],
+        heading: ["Inter", "Noto Sans Devanagari", "sans-serif"],
+        body: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Noto Sans Devanagari", "sans-serif"],
         devanagari: ["Noto Sans Devanagari", "sans-serif"],
       },
       borderRadius: {
