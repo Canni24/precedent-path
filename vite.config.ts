@@ -17,7 +17,6 @@ export default defineConfig(({ mode }) => ({
   },
   optimizeDeps: {
     include: ['three', '@react-three/fiber', '@react-three/drei'],
-    exclude: ['@react-three/postprocessing'],
   },
   build: {
     rollupOptions: {
