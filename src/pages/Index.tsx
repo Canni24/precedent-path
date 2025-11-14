@@ -5,6 +5,7 @@ import { DemoSearchSection } from "@/components/DemoSearchSection";
 import { UseCasesSection } from "@/components/UseCasesSection";
 import { TechStackSection } from "@/components/TechStackSection";
 import { CTASection } from "@/components/CTASection";
+import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import { renderCanvas } from "@/components/ui/canvas";
 
@@ -29,6 +30,7 @@ const Index = () => {
         <UseCasesSection />
         <TechStackSection />
         <CTASection />
+        <Footer />
       </div>
     </div>
   );
