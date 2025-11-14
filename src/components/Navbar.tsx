@@ -27,10 +27,10 @@ export const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Features", sectionId: "features" },
-    { label: "How It Works", sectionId: "how-it-works" },
-    { label: "Use Cases", sectionId: "use-cases" },
-    { label: "Tech Stack", sectionId: "tech-stack" },
+    { label: "Home", sectionId: "Home" },
+    { label: "About", sectionId: "About" },
+    { label: "Features", sectionId: "Features" },
+    { label: "Contact Us", sectionId: "Contact Us" },
   ];
 
   return (
@@ -62,7 +62,7 @@ export const Navbar = () => {
               <Scale className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="font-heading font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              LegalAI
+              JuriSynch
             </span>
           </motion.div>
 
