@@ -8,114 +8,110 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base backgrounds and text */
-    --background: 0 0% 98%;
-    --foreground: 211 74% 15%;
+    /* Base backgrounds and text - Cream and Brown palette */
+    --background: 40 30% 96%;
+    --foreground: 25 45% 12%;
 
     /* Cards and surfaces with glassmorphism support */
-    --card: 0 0% 100%;
-    --card-foreground: 211 74% 15%;
-    --card-glass: 0 0% 100% / 0.7;
+    --card: 40 25% 98%;
+    --card-foreground: 25 45% 12%;
+    --card-glass: 40 25% 98% / 0.8;
 
     /* Popovers */
-    --popover: 0 0% 100%;
-    --popover-foreground: 211 74% 15%;
+    --popover: 40 25% 98%;
+    --popover-foreground: 25 45% 12%;
 
-    /* Primary - Deep Navy */
-    --primary: 211 74% 15%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 211 74% 20%;
+    /* Primary - Rich Deep Brown */
+    --primary: 25 45% 12%;
+    --primary-foreground: 40 30% 96%;
+    --primary-hover: 25 45% 18%;
 
-    /* Secondary - Teal accent */
-    --secondary: 175 91% 36%;
-    --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 175 91% 30%;
+    /* Secondary - Warm Medium Brown */
+    --secondary: 30 35% 35%;
+    --secondary-foreground: 40 30% 96%;
+    --secondary-hover: 30 35% 28%;
 
-    /* Accent - Saffron */
-    --accent: 36 94% 49%;
-    --accent-foreground: 0 0% 98%;
-    --accent-hover: 36 94% 42%;
+    /* Accent - Golden Saffron (Indian touch) */
+    --accent: 38 92% 50%;
+    --accent-foreground: 25 45% 12%;
+    --accent-hover: 38 92% 45%;
 
     /* Muted tones */
-    --muted: 0 0% 96%;
-    --muted-foreground: 211 20% 45%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 30 25% 40%;
 
     /* Destructive */
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 40 30% 96%;
 
-    /* Borders and inputs */
-    --border: 211 20% 88%;
-    --input: 211 20% 92%;
-    --ring: 211 74% 15%;
+    /* Borders and inputs - Soft Brown tones */
+    --border: 35 20% 82%;
+    --input: 35 15% 88%;
+    --ring: 25 45% 12%;
 
-    /* Indigo for gradients */
-    --indigo: 239 84% 67%;
-    --indigo-dark: 239 84% 50%;
+    /* Additional Indian judiciary colors */
+    --judicial-gold: 42 88% 48%;
+    --judicial-brown: 28 40% 25%;
+    --judicial-cream: 45 40% 92%;
 
     /* Radius */
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 30% 96%;
+    --sidebar-foreground: 25 45% 12%;
+    --sidebar-primary: 25 45% 12%;
+    --sidebar-primary-foreground: 40 30% 96%;
+    --sidebar-accent: 40 20% 90%;
+    --sidebar-accent-foreground: 25 45% 12%;
+    --sidebar-border: 35 20% 82%;
+    --sidebar-ring: 38 92% 50%;
   }
 
   .dark {
-    --background: 211 74% 8%;
-    --foreground: 0 0% 98%;
+    --background: 25 45% 8%;
+    --foreground: 40 30% 96%;
 
-    --card: 211 74% 12%;
-    --card-foreground: 0 0% 98%;
-    --card-glass: 211 74% 12% / 0.7;
+    --card: 25 40% 12%;
+    --card-foreground: 40 30% 96%;
+    --card-glass: 25 40% 12% / 0.8;
 
-    --popover: 211 74% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 25 40% 12%;
+    --popover-foreground: 40 30% 96%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 211 74% 15%;
-    --primary-hover: 0 0% 92%;
+    --primary: 40 30% 96%;
+    --primary-foreground: 25 45% 12%;
+    --primary-hover: 40 25% 88%;
 
-    --secondary: 175 91% 36%;
-    --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 175 91% 42%;
+    --secondary: 30 35% 35%;
+    --secondary-foreground: 40 30% 96%;
+    --secondary-hover: 30 35% 42%;
 
-    --accent: 36 94% 49%;
-    --accent-foreground: 0 0% 98%;
-    --accent-hover: 36 94% 55%;
+    --accent: 38 92% 55%;
+    --accent-foreground: 25 45% 12%;
+    --accent-hover: 38 92% 60%;
 
-    --muted: 211 40% 16%;
-    --muted-foreground: 211 20% 65%;
+    --muted: 25 30% 18%;
+    --muted-foreground: 35 20% 65%;
 
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 30% 96%;
 
-    --border: 211 40% 20%;
-    --input: 211 40% 18%;
-    --ring: 175 91% 36%;
+    --border: 25 30% 22%;
+    --input: 25 30% 18%;
+    --ring: 38 92% 55%;
 
-    --indigo: 239 84% 67%;
-    --indigo-dark: 239 84% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --judicial-gold: 42 88% 52%;
+    --judicial-brown: 28 40% 30%;
+    --judicial-cream: 40 20% 20%;
+    
+    --sidebar-background: 25 45% 8%;
+    --sidebar-foreground: 40 30% 96%;
+    --sidebar-primary: 38 92% 55%;
+    --sidebar-primary-foreground: 25 45% 12%;
+    --sidebar-accent: 25 30% 18%;
+    --sidebar-accent-foreground: 40 30% 96%;
+    --sidebar-border: 25 30% 22%;
+    --sidebar-ring: 38 92% 55%;
   }
 }
 
@@ -126,11 +122,15 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+    font-family: 'EB Garamond', 'Crimson Text', 'Noto Sans Devanagari', serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', 'Noto Sans Devanagari', serif;
+    font-family: 'Cormorant Garamond', 'Noto Sans Devanagari', serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -155,7 +155,7 @@ All colors MUST be HSL.
 
   /* Gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-secondary to-indigo bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
   }
 
   /* Smooth scrolling */

@@ -55,6 +55,11 @@ export default {
           DEFAULT: "hsl(var(--indigo))",
           dark: "hsl(var(--indigo-dark))",
         },
+        judicial: {
+          gold: "hsl(var(--judicial-gold))",
+          brown: "hsl(var(--judicial-brown))",
+          cream: "hsl(var(--judicial-cream))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -67,8 +72,10 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "Noto Sans Devanagari", "sans-serif"],
-        serif: ["Merriweather", "Noto Sans Devanagari", "serif"],
+        sans: ["EB Garamond", "Crimson Text", "Noto Sans Devanagari", "serif"],
+        serif: ["Cormorant Garamond", "Noto Sans Devanagari", "serif"],
+        body: ["EB Garamond", "Crimson Text", "Noto Sans Devanagari", "serif"],
+        heading: ["Cormorant Garamond", "Noto Sans Devanagari", "serif"],
         devanagari: ["Noto Sans Devanagari", "sans-serif"],
       },
       borderRadius: {
