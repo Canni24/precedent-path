@@ -74,7 +74,7 @@ export const UseCasesSection = () => {
                   {/* Header */}
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${useCase.color} flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-8 h-8 text-primary" />
                     </div>
                     <Badge variant="secondary" className="text-xs font-semibold">
                       {useCase.role}
