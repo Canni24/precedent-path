@@ -122,15 +122,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'EB Garamond', 'Crimson Text', 'Noto Sans Devanagari', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Noto Sans Devanagari', sans-serif;
     font-weight: 400;
-    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', 'Noto Sans Devanagari', serif;
+    font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
     font-weight: 600;
-    letter-spacing: 0.02em;
   }
 }
 
