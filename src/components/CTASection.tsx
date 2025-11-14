@@ -87,14 +87,6 @@ export const CTASection = () => {
               Get Started Free
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 hover:bg-accent/10 hover:border-accent transition-all px-8"
-              onClick={() => navigate("/dashboard")}
-            >
-              Try Live Demo
-            </Button>
           </motion.div>
 
           {/* Trust indicators */}
