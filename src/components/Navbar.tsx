@@ -37,10 +37,13 @@ export const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
-        isScrolled ? "w-[95%] max-w-6xl" : "w-[90%] max-w-5xl"
-      }`}
+      className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4"
     >
+      <div
+        className={`transition-all duration-300 ${
+          isScrolled ? "w-[95%] max-w-6xl" : "w-[90%] max-w-5xl"
+        }`}
+      >
       <div
         className={`glass-card rounded-full px-6 py-3 transition-all duration-300 ${
           isScrolled
@@ -149,6 +152,7 @@ export const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
+      </div>
       </div>
     </motion.nav>
   );
