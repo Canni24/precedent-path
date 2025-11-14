@@ -14,124 +14,137 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative h-screen w-screen overflow-hidden">
-      {/* Helix WebGL Background - Positioned Absolutely */}
-      <div className="absolute inset-0 z-0">
-        <HelixHero 
-          title="" 
-          description=""
-        />
-      </div>
-
-      {/* Gradient Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-indigo/20 to-secondary/30 z-[1]" />
-
-      {/* Top Navigation Bar */}
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="relative z-20 flex items-center justify-between px-6 md:px-10 py-6"
-      >
-        <div className="flex items-center gap-3">
-          <Scale className="w-8 h-8 text-accent" />
-          <span className="text-xl font-bold text-foreground">JuriSynch</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <Button
-            variant="ghost"
-            className="text-foreground hover:text-accent"
-            onClick={() => navigate("/auth")}
+    <section className="relative h-screen w-screen overflow-hidden bg-background">
+      {/* Grid Layout: Left Content, Right Helix */}
+      <div className="relative h-full grid grid-cols-1 lg:grid-cols-2">
+        
+        {/* Left Side - Content */}
+        <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-20">
+          {/* Logo/Brand */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 mb-12"
           >
-            Sign In
-          </Button>
-        </div>
-      </motion.nav>
+            <Scale className="w-10 h-10 text-accent" />
+            <span className="text-2xl font-bold text-foreground">JuriSynch</span>
+          </motion.div>
 
-      {/* Hero Content */}
-      <div className="relative z-10 h-[calc(100vh-88px)] flex flex-col items-center justify-center px-6 text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/40 backdrop-blur-md"
-        >
-          <Scale className="w-4 h-4 text-accent" />
-          <span className="text-sm font-medium text-foreground">AI-Powered Legal Research</span>
-        </motion.div>
-
-        {/* Main Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-5xl"
-        >
-          Faster, Fairer
-          <br />
-          <span className="gradient-text">Legal Research</span>
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-lg md:text-xl text-foreground/80 mb-10 max-w-3xl mx-auto"
-        >
-          AI-powered synthesis platform that transforms case files into comprehensive dossiers.
-          Find precedents, generate citations, and navigate complex legal research in seconds.
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-        >
-          <Button
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all group"
-            onClick={() => navigate("/dashboard")}
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-accent/10 w-fit"
           >
-            <Upload className="w-5 h-5 mr-2" />
-            Upload Case Files
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-foreground/20 bg-background/30 backdrop-blur-md hover:bg-background/40 hover:border-accent transition-all"
-            onClick={() => navigate("/dashboard")}
-          >
-            <Search className="w-5 h-5 mr-2" />
-            Try Demo Search
-          </Button>
-        </motion.div>
+            <Scale className="w-4 h-4 text-accent" />
+            <span className="text-sm font-medium text-foreground">AI-Powered Legal Research</span>
+          </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              className="flex flex-col items-center gap-2 p-4 md:p-6 rounded-lg bg-background/40 backdrop-blur-md border border-border/30 hover:bg-background/50 transition-all"
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+          >
+            Faster, Fairer
+            <br />
+            <span className="gradient-text">Legal Research</span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl"
+          >
+            AI-powered synthesis platform that transforms case files into comprehensive dossiers.
+            Find precedents, generate citations, and navigate complex legal research in seconds.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 mb-12"
+          >
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all group"
+              onClick={() => navigate("/dashboard")}
             >
-              <stat.icon className="w-6 h-6 text-accent" />
-              <div className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</div>
-              <div className="text-xs md:text-sm text-foreground/70">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+              <Upload className="w-5 h-5 mr-2" />
+              Upload Case Files
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 hover:bg-accent/10 hover:border-accent transition-all"
+              onClick={() => navigate("/dashboard")}
+            >
+              <Search className="w-5 h-5 mr-2" />
+              Try Demo Search
+            </Button>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="grid grid-cols-3 gap-6 max-w-xl"
+          >
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  className="flex flex-col gap-2"
+                >
+                  <IconComponent className="w-5 h-5 text-accent mb-1" />
+                  <div className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</div>
+                  <div className="text-xs text-muted-foreground">{stat.label}</div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* Sign In Link */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-8"
+          >
+            <Button
+              variant="ghost"
+              className="text-muted-foreground hover:text-accent"
+              onClick={() => navigate("/auth")}
+            >
+              Already have an account? <span className="ml-1 font-semibold">Sign In</span>
+            </Button>
+          </motion.div>
+        </div>
+
+        {/* Right Side - Helix WebGL Background */}
+        <div className="hidden lg:block relative h-full">
+          <div className="absolute inset-0">
+            <HelixHero title="" description="" />
+          </div>
+        </div>
+
+        {/* Mobile: Helix as Background */}
+        <div className="lg:hidden absolute inset-0 opacity-20 pointer-events-none">
+          <HelixHero title="" description="" />
+        </div>
       </div>
     </section>
   );
