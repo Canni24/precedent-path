@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Upload, Search, Scale, TrendingUp, Clock, Target } from "lucide-react";
+import { ArrowRight, Upload, Scale, TrendingUp, Clock, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Hero as HelixHero } from "@/components/ui/helix-hero";
 
@@ -80,15 +80,6 @@ export const Hero = () => {
               <Upload className="w-5 h-5 mr-2" />
               Upload Case Files
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 hover:bg-accent/10 hover:border-accent transition-all"
-              onClick={() => navigate("/dashboard")}
-            >
-              <Search className="w-5 h-5 mr-2" />
-              Try Demo Search
             </Button>
           </motion.div>
 
