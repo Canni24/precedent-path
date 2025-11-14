@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SearchPanel } from "@/components/SearchPanel";
+import { renderCanvas } from "@/components/ui/canvas";
 import { ResultsViewer } from "@/components/ResultsViewer";
 import { DossierPanel } from "@/components/DossierPanel";
 import { SettingsModal } from "@/components/SettingsModal";
@@ -52,6 +53,10 @@ export default function Dashboard() {
   const [results, setResults] = useState(mockResults);
   const [selectedResult, setSelectedResult] = useState<any>(null);
 
+  useEffect(() => {
+    renderCanvas();
+  }, []);
+
   const handleSearch = (query: string, filters: any) => {
     toast.success(`Searching for: ${query}`);
     // Simulate search - in real app, this would call API
@@ -64,7 +69,13 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="h-screen flex flex-col bg-background">
+    <div className="h-screen flex flex-col bg-background relative">
+      {/* Canvas Background */}
+      <canvas
+        className="pointer-events-none absolute inset-0 z-0"
+        id="canvas"
+      />
+      
       {/* Header */}
       <motion.header
         initial={{ opacity: 0, y: -20 }}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { renderCanvas } from "@/components/ui/canvas";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,6 +20,10 @@ export default function Auth() {
   const [selectedRole, setSelectedRole] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    renderCanvas();
+  }, []);
 
   const handleLogin = () => {
     if (!selectedRole) {
@@ -39,9 +44,15 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 p-6 relative">
+      {/* Canvas Background */}
+      <canvas
+        className="pointer-events-none absolute inset-0 z-0"
+        id="canvas"
+      />
+      
       {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-0">
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
           animate={{
