@@ -38,11 +38,6 @@ export default function Auth() {
     navigate("/dashboard");
   };
 
-  const handleDemo = () => {
-    toast.success("Entering demo mode");
-    navigate("/dashboard");
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 p-6 relative">
       {/* Canvas Background */}
@@ -143,14 +138,6 @@ export default function Auth() {
               size="lg"
             >
               Sign In
-            </Button>
-            <Button
-              onClick={handleDemo}
-              variant="outline"
-              className="w-full"
-              size="lg"
-            >
-              Try Demo
             </Button>
           </div>
 
