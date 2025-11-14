@@ -3,9 +3,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Upload, Search, Scale, TrendingUp, Clock, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Hero as HelixHero } from "@/components/ui/helix-hero";
+import { useEffect } from "react";
+import { renderCanvas } from "@/components/ui/canvas";
 
 export const Hero = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    renderCanvas();
+  }, []);
 
   const stats = [
     { icon: TrendingUp, value: "2M+", label: "Indexed Documents" },
@@ -15,8 +21,14 @@ export const Hero = () => {
 
   return (
     <section className="relative h-screen w-screen overflow-hidden bg-background">
+      {/* Canvas Background */}
+      <canvas
+        className="pointer-events-none absolute inset-0 z-0"
+        id="canvas"
+      />
+      
       {/* Grid Layout: Left Content, Right Helix */}
-      <div className="relative h-full grid grid-cols-1 lg:grid-cols-2">
+      <div className="relative h-full grid grid-cols-1 lg:grid-cols-2 z-10">
         
         {/* Left Side - Content */}
         <div className="relative z-10 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-20">
