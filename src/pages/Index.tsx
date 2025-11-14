@@ -25,14 +25,22 @@ const Index = () => {
       
       <div className="relative z-[5]">
         <Navbar />
-        <Hero />
-        <FeaturesSection />
-        <AboutSection />
+        <div id="home">
+          <Hero />
+        </div>
+        <div id="features">
+          <FeaturesSection />
+        </div>
+        <div id="about">
+          <AboutSection />
+        </div>
         <HowItWorksSection />
         <UseCasesSection />
         <TechStackSection />
         <CTASection />
-        <Footer />
+        <div id="contact">
+          <Footer />
+        </div>
       </div>
     </div>
   );

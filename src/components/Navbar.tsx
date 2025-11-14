@@ -27,10 +27,10 @@ export const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Home", sectionId: "Home" },
-    { label: "About", sectionId: "About" },
-    { label: "Features", sectionId: "Features" },
-    { label: "Contact Us", sectionId: "Contact Us" },
+    { label: "Home", sectionId: "home" },
+    { label: "Features", sectionId: "features" },
+    { label: "About", sectionId: "about" },
+    { label: "Contact", sectionId: "contact" },
   ];
 
   return (
