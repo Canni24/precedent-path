@@ -15,4 +15,18 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ['three', '@react-three/fiber', '@react-three/drei'],
+    exclude: ['@react-three/postprocessing'],
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'three': ['three'],
+          'r3f': ['@react-three/fiber', '@react-three/drei'],
+        },
+      },
+    },
+  },
 }));

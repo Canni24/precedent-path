@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Upload, Scale, TrendingUp, Clock, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Suspense } from "react";
 import { Hero as HelixHero } from "@/components/ui/helix-hero";
 export const Hero = () => {
   const navigate = useNavigate();
@@ -150,13 +151,17 @@ export const Hero = () => {
         {/* Right Side - Helix WebGL Background */}
         <div className="hidden lg:block relative h-full z-[2]">
           <div className="absolute inset-0">
-            <HelixHero title="" description="" />
+            <Suspense fallback={<div className="h-full w-full bg-background" />}>
+              <HelixHero title="" description="" />
+            </Suspense>
           </div>
         </div>
 
         {/* Mobile: Helix as Background */}
         <div className="lg:hidden absolute inset-0 opacity-20 pointer-events-none z-[2]">
-          <HelixHero title="" description="" />
+          <Suspense fallback={null}>
+            <HelixHero title="" description="" />
+          </Suspense>
         </div>
       </div>
     </section>;
