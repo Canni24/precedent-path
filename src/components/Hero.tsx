@@ -94,9 +94,9 @@ export const Hero = () => {
           duration: 0.6,
           delay: 0.4
         }} className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all group" onClick={() => navigate("/dashboard")}>
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all group" onClick={() => navigate("/auth")}>
               <Upload className="w-5 h-5 mr-2" />
-              Upload Case Files
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
