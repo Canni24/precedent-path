@@ -74,14 +74,14 @@ const HelixRings: React.FC<HelixRingsProps> = ({
 					castShadow
 				>
 					<meshPhysicalMaterial
-						color="#45BFD3"
-						metalness={0.7}
-						roughness={0.5}
-						clearcoat={0}
-						clearcoatRoughness={0.15}
-						reflectivity={0}
-						iridescence={0.96}
-						iridescenceIOR={1.5}
+						color="#C19A6B"
+						metalness={0.6}
+						roughness={0.4}
+						clearcoat={0.3}
+						clearcoatRoughness={0.2}
+						reflectivity={0.5}
+						iridescence={0.85}
+						iridescenceIOR={1.4}
 						iridescenceThicknessRange={[100, 400]}
 					/>
 				</mesh>
@@ -109,19 +109,19 @@ const Scene: React.FC = () => {
 			}}
 			style={{ background: "transparent" }}
 		>
-			<color attach="background" args={["#ffffff"]} />
+			<color attach="background" args={["#F5F1E8"]} />
 			
 			<hemisphereLight
-				color={"#cfe8ff"}
-				groundColor={"#ffffff"}
-				intensity={2}
+				color={"#F5E6D3"}
+				groundColor={"#FAF7F0"}
+				intensity={1.8}
 			/>
 
 			<directionalLight
 				position={[10, 10, 5]}
-				intensity={2}
+				intensity={1.5}
 				castShadow
-				color={"#ffeedd"}
+				color={"#E6C896"}
 				shadow-mapSize-width={2048}
 				shadow-mapSize-height={2048}
 			/>
