@@ -10,7 +10,7 @@ import { CitationNetwork } from "@/components/CitationNetwork";
 import { BookmarksPanel } from "@/components/BookmarksPanel";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Scale, Settings, LogOut, BarChart3, Network, Bookmark, History, Search } from "lucide-react";
+import { Scale, Settings, LogOut, BarChart3, Network, Bookmark, History, Search, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
@@ -727,6 +727,14 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => navigate("/")}
+              title="Back to Home"
+            >
+              <Home className="w-5 h-5" />
+            </Button>
             <Button
               variant="ghost"
               size="icon"
