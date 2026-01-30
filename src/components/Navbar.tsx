@@ -29,6 +29,7 @@ export const Navbar = () => {
   const navLinks = [
     { label: "Home", sectionId: "home" },
     { label: "Features", sectionId: "features" },
+    { label: "Pricing", sectionId: "pricing" },
     { label: "About", sectionId: "about" },
     { label: "Contact", sectionId: "contact" },
   ];
