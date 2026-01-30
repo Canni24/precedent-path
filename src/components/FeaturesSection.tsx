@@ -6,130 +6,130 @@ import { Badge } from "@/components/ui/badge";
 const features = [
   {
     icon: FileText,
-    title: "Intelligent Document Synthesis",
-    description: "Transform your legal research workflow with advanced AI-powered document analysis that understands context, extracts critical information, and synthesizes complex legal documents into actionable insights.",
+    title: "Intelligent Contract Analysis",
+    description: "Transform complex contracts into clear, actionable insights using AI trained on Indian legal principles.",
     details: [
-      "OCR support for scanned documents and handwritten notes",
-      "Multi-language document processing with translation",
-      "Automatic fact extraction and timeline generation",
-      "Cross-reference detection across multiple documents"
+      "PDF, DOCX & scanned contract support (OCR)",
+      "Clause-level breakdown and categorization",
+      "Automatic detection of risky and unfair terms",
+      "Structured summaries for quick understanding"
     ],
     color: "text-accent",
     badge: "AI-Powered",
   },
   {
     icon: Search,
-    title: "Semantic Precedent Search",
+    title: "Semantic Clause Risk Detection",
     description: "Go beyond keyword matching with our advanced semantic search engine that understands legal nuances, context, and relationships between cases to deliver precisely relevant precedents.",
     details: [
-      "Natural language query processing",
-      "Relevance ranking by jurisdiction and citation strength",
-      "Similar case clustering and pattern detection",
-      "Historical precedent tracking across decades"
+      "Context-aware clause interpretation",
+      "Detection of hidden non-compete and restraint clauses",
+      "Identification of unfair penalties and IP transfers",
+      "Risk ranking based on clause severity"
     ],
     color: "text-judicial-gold",
     badge: "Smart Search",
   },
   {
     icon: Brain,
-    title: "AI-Powered Dossier Generation",
+    title: "Explainable Risk Scoring",
     description: "Generate comprehensive, court-ready case dossiers in seconds. Our AI analyzes facts, identifies legal issues, suggests relevant precedents, and drafts citation-aware arguments.",
     details: [
-      "Automated legal issue identification and categorization",
-      "Precedent suggestion with citation formatting",
-      "Argument structure generation based on case law",
-      "Customizable templates for different case types"
+      "Overall contract risk score (0–100)",
+      "Clause-wise severity indicators",
+      "Indian law references for each flagged risk",
+      "Plain-language (ELI5) explanations for non-lawyers"
     ],
     color: "text-indigo",
     badge: "Auto-Generate",
   },
   {
     icon: Zap,
-    title: "Real-Time Citation Mapping",
-    description: "Visualize the evolution of legal principles through interactive citation networks. Understand how cases influence each other and track the development of legal doctrines over time.",
+    title: "Statutory Compliance Mapping",
+    description: "Analyze contracts directly against Indian statutory provisions.",
     details: [
-      "Interactive citation network visualization",
-      "Timeline view of precedent evolution",
-      "Influential case identification and ranking",
-      "Citation strength analysis and validation"
+      "Indian Contract Act, 1872 coverage",
+      "Section 27 (Restraint of Trade) detection",
+      "Section 23 (Unlawful Object) identification",
+      "Section-wise legal justification for every flag"
     ],
     color: "text-saffron",
     badge: "Visual Analytics",
   },
   {
     icon: Shield,
-    title: "Jurisdiction-Aware Filtering",
-    description: "Ensure legal accuracy with sophisticated jurisdiction filtering. Our system understands the hierarchy of courts and the applicability of precedents across different legal frameworks.",
+    title: "Fairness & Deviation Analysi",
+    description: "Compare contracts against standard “fair” agreement templates to surface unusually harsh terms.",
     details: [
-      "Multi-tier court hierarchy support (Supreme, High, District)",
-      "State and union territory specific filtering",
-      "Binding vs persuasive precedent classification",
-      "Jurisdiction conflict resolution assistance"
+      "Deviation detection from balanced contract norms",
+      "One-sided obligation identification",
+      "Excessive termination and indemnity clauses",
+      "Freelancer- and startup-friendly benchmarking"
     ],
     color: "text-primary",
     badge: "Compliance",
   },
   {
     icon: BarChart,
-    title: "Advanced Analytics Dashboard",
-    description: "Make data-driven legal decisions with comprehensive analytics. Track research patterns, analyze case outcomes, identify trends, and benchmark against historical data.",
+    title: "Interactive Risk Dashboard",
+    description: "Visualize contract risks clearly with an intuitive dashboard.",
     details: [
-      "Case outcome prediction and trend analysis",
-      "Judge and court performance insights",
-      "Research time tracking and optimization",
-      "Success rate analysis by case type and argument"
+      "Clause-level risk heat indicators",
+      "Risk distribution charts",
+      "Highlighted problem sections",
+      "Quick navigation to high-risk clauses"
     ],
     color: "text-secondary",
     badge: "Insights",
   },
   {
     icon: BookOpen,
-    title: "Legal Knowledge Base",
-    description: "Access a comprehensive, continuously updated repository of legal principles, statutes, and precedents. Built-in explanations make complex legal concepts accessible.",
+    title: "Legal Knowledge Engine",
+    description: "Built-in understanding of Indian contract law concepts for accurate analysis.",
     details: [
-      "Statute and act database with amendments",
-      "Legal term glossary with case law references",
-      "Scholarly article and commentary integration",
-      "Regular updates with latest judgments"
+      "Indian legal terminology mapping",
+      "Clause-to-law reference database",
+      "Contextual legal explanations",
+      "Regularly updatable legal rule engine"
     ],
     color: "text-judicial-maroon",
     badge: "Knowledge Hub",
   },
   {
     icon: Scale,
-    title: "Argument Strength Analyzer",
-    description: "Evaluate the strength of legal arguments using AI-powered analysis. Identify weaknesses, suggest improvements, and predict counterarguments before they arise.",
+    title: "Clause Strength & Impact Analyzer",
+    description: "Evaluate how strongly a clause affects your rights and future work.",
     details: [
-      "Precedent strength scoring and validation",
-      "Logical consistency checking",
-      "Counterargument prediction and preparation",
-      "Citation quality assessment"
+      "Long-term impact assessment",
+      "Employment and IP risk evaluation",
+      "Restriction duration and scope analysis",
+      "Actionability suggestions (negotiate / remove / accept)"
     ],
     color: "text-teal",
     badge: "Strategy",
   },
   {
     icon: Users,
-    title: "Collaborative Research Tools",
-    description: "Work seamlessly with your legal team. Share research, annotate cases, and collaborate on dossiers with real-time synchronization and version control.",
+    title: "Privacy-First Architecture",
+    description: "Your contracts never leave your control.",
     details: [
-      "Real-time collaborative editing and annotations",
-      "Team workspace with role-based access control",
-      "Research history and version tracking",
-      "Integrated communication and task management"
+      "In-memory contract processing",
+      "Automatic deletion after analysis",
+      "No contract data storage",
+      "No model training on user documents"
     ],
     color: "text-accent",
     badge: "Team Work",
   },
   {
     icon: Clock,
-    title: "Case Timeline Generator",
-    description: "Automatically create visual timelines of case events, procedural history, and key dates. Track deadlines and get intelligent reminders for important milestones.",
+    title: "Contract Timeline & Obligation Tracker",
+    description: "Understand when obligations start, end, or escalate.",
     details: [
-      "Automated event extraction from documents",
-      "Interactive timeline visualization",
-      "Deadline tracking with smart notifications",
-      "Procedural history compilation"
+      "Duration and expiry detection",
+      "Lock-in and notice period analysis",
+      "Post-termination restriction timelines",
+      "Key obligation summaries"
     ],
     color: "text-indigo",
     badge: "Time Saver",
@@ -149,13 +149,13 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: "Precedent Impact Tracking",
-    description: "Monitor how precedents are being applied in recent cases. Get alerts when important cases cite your key precedents, and track shifting legal interpretations.",
+    title: "Freelancer & Startup Defense System",
+    description: "Built as a first line of defense for individuals without legal teams.",
     details: [
-      "Real-time precedent usage monitoring",
-      "Impact score calculation for landmark cases",
-      "Trend alerts for changing interpretations",
-      "Comparative analysis across jurisdictions"
+      "Non-compete and exclusivity detection",
+      "Unfair IP ownership clauses",
+      "Payment risk identification",
+      "Plain-English warnings before signing"
     ],
     color: "text-saffron",
     badge: "Trending",
