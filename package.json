@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
@@ -56,7 +57,9 @@
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
+    "react-dropzone": "^14.4.0",
     "react-hook-form": "^7.61.1",
+    "react-markdown": "^10.1.0",
     "react-progressive-blur": "^1.0.6",
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^6.30.1",

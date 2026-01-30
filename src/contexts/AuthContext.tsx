@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 
 interface AuthContextType {
   user: User | null;
@@ -14,7 +15,7 @@ const AuthContext = createContext<AuthContextType>({
   user: null,
   session: null,
   loading: true,
-  signOut: async () => {},
+  signOut: async () => { },
 });
 
 export const useAuth = () => {
@@ -42,7 +43,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         setSession(session);
         setUser(session?.user ?? null);
         setLoading(false);
-        
+
         // Handle redirects after auth state changes
         if (event === 'SIGNED_IN' && session) {
           setTimeout(() => {
@@ -69,7 +70,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }, [navigate]);
 
   const signOut = async () => {
+    const isConfirmed = window.confirm('Are you sure you want to sign out?');
+    if (!isConfirmed) return;
     await supabase.auth.signOut();
+    navigate('/auth');
+    toast.success("Logged out Successfully")
   };
 
   return (

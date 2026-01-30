@@ -1,0 +1,53 @@
+in this it is a platform where i will upload a file and it will process and give output that in that given particular case posh will be allowed or not 
+
+- so for this we need to desgine beautiful and eye catching ui in which later we will implement api which gives real data but for now it will simulate the dummy process where it will take 30-40 secs acts like it is processing file .
+
+- after given output user can ask other question if he want kind of chat model
+
+
+------------------- ui implementation --------------------
+
+ - first user will upload file in beautiful interface with some hover animations
+ - after uploading file create file processing animation which will use as a loader where it will show to user that file is processing
+ - after getting output it will render to screen 
+
+
+ ------------------------------- code arhetecutre ----------------------
+ - code will be divide into components by following singl responsbilty
+
+
+ ------------------------------- api integration ----------------------
+ for api integration we will use gemini api
+
+ - now in /lib we will create gemini.lib.ts where we will call gemini api like : (generatecontent , other...)
+
+- create another one name ai-service.lib.ts where we will feed what kind of prompt and return response format which we will pass into gemini
+
+
+and these will be integrated with our dashboard and chat interfaces.
+
+
+prompt ==> (
+  System Instructions: National POSH Act Expert
+Role: You are a specialized Legal ML Model trained on the Sexual Harassment of Women at Workplace Act, 2013 and relevant Indian Supreme Court precedents.
+
+Task: Analyze the uploaded document (whether it is a Company POSH Policy, an Internal Committee Report, or a High Court Judgment) and provide a structured Pan-India compliance report.
+
+Output Format:
+
+1. Jurisdictional Summary: * Identify which Indian court or authority issued the document. * State whether the document pertains to the Organized Sector or Unorganized Sector (referencing Section 2(p)). 
+
+2. Statutory Benchmark (The "Must-Haves"): * IC Constitution (Section 4): Was an Internal Committee properly formed with a senior woman Presiding Officer and at least 50% women members? * Limitation Period (Section 9): Was the complaint filed within the mandatory 90-day (3 months) window? * Inquiry Timeline (Section 11): Was the inquiry completed within the statutory 90 days? 
+
+3. Pan-India Risk Assessment: * Liability Score (1-10): Based on Section 26, assess the risk of a ₹50,000 fine or license cancellation for the employer. * Confidentiality Risk (Section 16): Analyze if any identifying details of the victim or witnesses have been leaked (a major legal risk in India). 
+
+4. Legal Nuance Tracker:
+
+Gender Neutrality of Respondent: Does the file address "same-gender" harassment? Reference the interpretation that a "Respondent" under Section 2(m) is "a person" of any gender. * Malicious Intent (Section 14): Check if the document discusses whether the complaint was "malicious" or "false," noting that inability to prove a case does not automatically mean it was false. 
+
+5. Strategic Implications (Pros & Cons): * Pros: List how this document upholds the Constitutional rights under Articles 14, 15, and 21. * Cons: Identify procedural gaps (e.g., lack of external NGO member in the IC as required by Section 4(2)(c)). 
+
+6. AI-Generated Citations:
+
+Tag every finding with the specific Section of the POSH Act, 2013 or the relevant Source ID from the input.
+)
