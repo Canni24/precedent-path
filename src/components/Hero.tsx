@@ -2,6 +2,132 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Upload, Scale, TrendingUp, Clock, Target } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { useMemo, useRef } from "react";
+import * as THREE from "three";
+
+interface HelixRingsProps {
+  levelsUp?: number;
+  levelsDown?: number;
+  stepY?: number;
+  rotationStep?: number;
+}
+
+const HelixRings: React.FC<HelixRingsProps> = ({
+  levelsUp = 10,
+  levelsDown = 10,
+  stepY = 0.85,
+  rotationStep = Math.PI / 16,
+}) => {
+  const groupRef = useRef<THREE.Group>(new THREE.Group());
+
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.005;
+    }
+  });
+
+  const ringGeometry = useMemo(() => {
+    const shape = new THREE.Shape();
+    const radius = 0.35;
+    shape.absarc(0, 0, radius, 0, Math.PI * 2, false);
+
+    const depth = 10;
+    const extrudeSettings: THREE.ExtrudeGeometryOptions = {
+      depth,
+      bevelEnabled: true,
+      bevelThickness: 0.05,
+      bevelSize: 0.05,
+      bevelSegments: 4,
+      curveSegments: 64,
+    };
+
+    const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+    geometry.translate(0, 0, -depth / 2);
+
+    return geometry;
+  }, []);
+
+  const elements = [];
+  for (let i = -levelsDown; i <= levelsUp; i++) {
+    elements.push({
+      id: `helix-ring-${i}`,
+      y: i * stepY,
+      rotation: i * rotationStep,
+    });
+  }
+
+  return (
+    <group 
+      scale={1}
+      position={[0, 0, 0]}
+      ref={groupRef}
+      rotation={[0, 0, 0]}
+    >
+      {elements.map((el) => (
+        <mesh
+          key={el.id}
+          geometry={ringGeometry}
+          position={[0, el.y, 0]}
+          rotation={[0, Math.PI / 2 + el.rotation, 0]}
+          castShadow
+        >
+          <meshPhysicalMaterial
+            color="#C19A6B"
+            metalness={0.6}
+            roughness={0.4}
+            clearcoat={0.3}
+            clearcoatRoughness={0.2}
+            reflectivity={0.5}
+            iridescence={0.85}
+            iridescenceIOR={1.4}
+            iridescenceThicknessRange={[100, 400]}
+          />
+        </mesh>
+      ))}
+    </group>
+  );
+};
+
+const HelixScene: React.FC = () => {
+  return (
+    <Canvas
+      className="h-full w-full"
+      orthographic
+      shadows
+      camera={{
+        zoom: 70,
+        position: [0, 0, 7],
+        near: 0.1,
+        far: 1000,
+      }}
+      gl={{ 
+        antialias: true,
+        alpha: true,
+        powerPreference: "high-performance"
+      }}
+      style={{ background: "transparent" }}
+    >
+      <hemisphereLight
+        color={"#F5E6D3"}
+        groundColor={"#FAF7F0"}
+        intensity={1.8}
+      />
+
+      <directionalLight
+        position={[10, 10, 5]}
+        intensity={1.5}
+        castShadow
+        color={"#E6C896"}
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+      />
+
+      <HelixRings />
+    </Canvas>
+  );
+};
+
 export const Hero = () => {
   const navigate = useNavigate();
   const stats = [{
@@ -144,6 +270,15 @@ export const Hero = () => {
               Already have an account? <span className="ml-1 font-semibold">Sign In</span>
             </Button>
           </motion.div>
+        </div>
+
+        {/* Right Side - Helix 3D Animation (Desktop only) */}
+        <div className="hidden lg:block relative h-full">
+          <div className="absolute inset-0">
+            <HelixScene />
+          </div>
+          {/* Gradient overlay for smooth blend */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent pointer-events-none" />
         </div>
 
       </div>
