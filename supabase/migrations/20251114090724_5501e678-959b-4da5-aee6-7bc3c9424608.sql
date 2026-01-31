@@ -1,7 +1,7 @@
 -- Create user role enum
 CREATE TYPE public.app_role AS ENUM ('admin', 'lawyer', 'researcher', 'user');
 
--- Create profiles table
+
 CREATE TABLE public.profiles (
   id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   email TEXT NOT NULL,
