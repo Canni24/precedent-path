@@ -191,7 +191,7 @@ export default function ChatInterface({ analysisResult }: ChatInterfaceProps) {
             </Button>
           </form>
           <p className="text-[10px] text-center mt-3 text-muted-foreground uppercase tracking-widest font-bold">
-            Powered by Lexis-Nexus Intelligence Core
+            Note - AI can make mistakes. Please verfiy with your Legal Advisor
           </p>
         </div>
       </Card>

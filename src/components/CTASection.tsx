@@ -68,7 +68,7 @@ export const CTASection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
           >
-            Join thousands of legal professionals who are saving time and building stronger cases with JuriSynch
+            Join thousands of legal professionals who are saving time and building stronger cases with LegalBhai
           </motion.p>
 
           {/* CTA buttons */}

@@ -22,13 +22,13 @@ interface PricingPlan {
 
 const pricingPlans: PricingPlan[] = [
   {
-    name: "Starter",
+    name: "Free/Starter",
     description: "Perfect for individual lawyers and small cases",
-    monthlyPrice: 1999,
-    yearlyPrice: 19999,
-    creditsPerCase: 10,
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    creditsPerCase: 5,
     features: [
-      "10 case credits per month",
+      "5 case credits per month",
       "Basic AI analysis",
       "Email support",
       "Standard response time",
@@ -40,11 +40,11 @@ const pricingPlans: PricingPlan[] = [
   {
     name: "Professional",
     description: "For growing law firms and frequent users",
-    monthlyPrice: 4999,
-    yearlyPrice: 49999,
-    creditsPerCase: 50,
+    monthlyPrice: 2499,
+    yearlyPrice: 29999,
+    creditsPerCase: 100,
     features: [
-      "50 case credits per month",
+      "100 case credits per month",
       "Advanced AI analysis",
       "Priority email support",
       "Fast response time",
@@ -61,9 +61,9 @@ const pricingPlans: PricingPlan[] = [
     description: "For large firms and organizations",
     monthlyPrice: 14999,
     yearlyPrice: 149999,
-    creditsPerCase: 200,
+    creditsPerCase: 500,
     features: [
-      "200 case credits per month",
+      "Unlimited case credits per month",
       "Premium AI analysis with citations",
       "24/7 dedicated support",
       "Instant response time",

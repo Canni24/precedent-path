@@ -54,7 +54,7 @@ export const UseCasesSection = () => {
             Built for Every <span className="gradient-text">Legal Professional</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From judges to law firms, JuriSynch adapts to your unique workflow and requirements
+            From judges to law firms, LegalBhai adapts to your unique workflow and requirements
           </p>
         </motion.div>
 

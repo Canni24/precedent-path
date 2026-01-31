@@ -160,7 +160,7 @@ export const Hero = () => {
           duration: 0.6
         }} className="flex items-center gap-3 mb-12">
             <Scale className="w-10 h-10 text-accent" />
-            <span className="text-2xl font-bold text-foreground">JuriSynch</span>
+            <span className="text-2xl font-bold text-foreground">LegalBhai</span>
           </motion.div>
 
           {/* Badge */}
@@ -175,7 +175,7 @@ export const Hero = () => {
           delay: 0.1
         }} className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-accent/10 w-fit">
             <Scale className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-foreground">Improving the Indian Judiciary System            </span>
+            <span className="text-sm font-medium text-foreground">Legal Research Ab Ek Click Par.            </span>
           </motion.div>
 
           {/* Main Heading */}

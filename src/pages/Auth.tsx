@@ -166,7 +166,7 @@ export default function Auth() {
             <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
               <Scale className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="text-3xl font-bold mb-2">JuriSynch</h1>
+            <h1 className="text-3xl font-bold mb-2">LegalBhai</h1>
             <p className="text-muted-foreground">Legal Research Platform</p>
           </div>
 

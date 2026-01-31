@@ -41,7 +41,7 @@ export const HowItWorksSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            How <span className="gradient-text">JuriSynch</span> Works
+            How <span className="gradient-text">LegalBhai</span> Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From upload to export in four simple steps — powered by state-of-the-art legal AI

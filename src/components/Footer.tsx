@@ -16,7 +16,7 @@ export const Footer = () => {
     if (email) {
       toast({
         title: "Successfully subscribed!",
-        description: "You'll receive updates about JuriSynch.",
+        description: "You'll receive updates about LegalBhai.",
       });
       setEmail("");
     }
@@ -64,7 +64,7 @@ export const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: "contact@jurisynch.com" },
+    { icon: Mail, text: "contact@LegalBhai.com" },
     { icon: Phone, text: "+91 8393904826" },
     { icon: MapPin, text: "Kanpur, Uttar Pradesh" },
   ];
@@ -86,7 +86,7 @@ export const Footer = () => {
           >
             <div className="flex items-center gap-2 mb-4">
               <Scale className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold text-foreground">JuriSynch</span>
+              <span className="text-2xl font-bold text-foreground">LegalBhai</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Empowering legal professionals with AI-driven case law research and intelligent document analysis.
@@ -203,7 +203,7 @@ export const Footer = () => {
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-foreground mb-3">Stay Updated</h3>
             <p className="text-muted-foreground mb-6">
-              Get the latest updates on legal tech innovations and JuriSynch features.
+              Get the latest updates on legal tech innovations and LegalBhai features.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="flex gap-2 max-w-md mx-auto">
               <Input
@@ -233,7 +233,7 @@ export const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} JuriSynch. All rights reserved.
+              © {new Date().getFullYear()} LegalBhai. All rights reserved.
             </p>
 
             {/* Social Links */}

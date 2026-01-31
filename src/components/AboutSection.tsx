@@ -31,7 +31,7 @@ const values = [
   },
   {
     icon: Heart,
-    title: "Built by Lawyers, for Lawyers",
+    title: "Built by Lawyers, for Individuals",
     description: "Our team includes practicing lawyers and legal researchers who understand your challenges because they've lived them. Every feature solves a real problem.",
     color: "text-accent",
   },
@@ -39,27 +39,27 @@ const values = [
 
 const timeline = [
   {
-    year: "2020",
+    year: "2026",
     title: "The Beginning",
     description: "Founded by a team of lawyers frustrated with outdated research tools. Started with a simple vision: make legal research faster and smarter.",
   },
   {
-    year: "2021",
+    year: "2026",
     title: "AI Integration",
     description: "Launched our first AI-powered search engine after processing over 500,000 Indian legal cases. Reduced research time by 70% for early adopters.",
   },
   {
-    year: "2022",
+    year: "2026",
     title: "Rapid Growth",
     description: "Expanded to 25+ High Courts and Supreme Court database. Reached 10,000 legal professionals using our platform daily.",
   },
   {
-    year: "2023",
+    year: "2026",
     title: "Innovation Awards",
     description: "Recognized as 'Best Legal Tech Innovation' by the Indian Legal Tech Forum. Introduced collaborative research tools and analytics.",
   },
   {
-    year: "2024",
+    year: "2026",
     title: "Global Expansion",
     description: "Serving 50,000+ legal professionals across India. Launched advanced dossier generation and citation mapping. The journey continues...",
   },

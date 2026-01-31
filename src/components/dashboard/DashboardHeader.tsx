@@ -22,7 +22,7 @@ export default function DashboardHeader() {
             <Scale className="w-6 h-6 text-primary" />
           </div>
           <div>
-            <h1 className="text-xl font-bold">JuriSynch</h1>
+            <h1 className="text-xl font-bold">LegalBhai</h1>
             <p className="text-xs text-muted-foreground">Legal Research Platform</p>
           </div>
         </div>

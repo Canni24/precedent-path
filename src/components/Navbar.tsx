@@ -63,7 +63,7 @@ export const Navbar = () => {
               <Scale className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="font-heading font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              JuriSynch
+              LegalBhai
             </span>
           </motion.div>
 
